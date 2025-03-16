@@ -12,10 +12,9 @@ A powerful, developer-friendly middleware for Safaricom's MPESA payment APIs. MP
 - **Authentication Handling**: Automatic OAuth token management
 - **Comprehensive Coverage**: Support for STK Push, C2B, B2C, and more
 - **Robust Error Handling**: Detailed error messages and logging
-- **TypeScript Support**: Full type definitions for better developer experience
 - **Webhook Management**: Easy configuration of callback URLs and processing
 - **Transaction Tracking**: Built-in transaction status tracking
-- **Flexible Deployment**: Use as a standalone service or npm package
+- **Flexible Deployment**: Use as a standalone service (middleware)
 
 ## 📦 Installation
 
@@ -180,7 +179,7 @@ curl -X POST http://localhost:3000/api/v1/b2c/payment \
 MPESA Connect automatically processes incoming webhooks. Set up your callback URLs using the C2B registration endpoint, and implement handlers for incoming notifications:
 
 ```javascript
-// When using as an npm package
+// TODO: When using as an npm package 
 mpesa.on('payment.received', (payment) => {
   console.log('Payment received:', payment);
   // Update your database, notify your user, etc.
